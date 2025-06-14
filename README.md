@@ -25,4 +25,4 @@
     - 重启nginx服务以及启动`app.py`
 ---
 ## 致谢
-- https://github.com/xhofe的原项目
+- https://github.com/xhofe 的原项目
