@@ -13,7 +13,12 @@
 3. 修改`results.html`
     - 修改`https://<auth.example.com>/api/token` 到你的域名
 ---
-4. 在`nginx`中添加服务
+4. 导入环境变量
+
+    - `export ALIYUN_CLIENT_ID=\<your_id\>`
+    - `export ALIYUN_CLIENT_SECRET=\<your_secret\>`
+--- 
+5. 在`nginx`中添加服务
     - 将`auth.example.com.conf` 中的域名修改为你的域名和端口，使用\<\>包含的内容需要替换，
     - 将`auth.example.com.conf` 修改为你的域名，并放到 `/etc/nginx/conf.d`
     - 将 `nginx.conf` 移动到 `/etc/nginx/nginx.conf`
