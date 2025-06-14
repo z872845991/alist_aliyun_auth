@@ -5,7 +5,7 @@ import os
 import urllib.parse
 
 APP_PORT = <Port>  # 替换为实际端口号
-REDIRECT_URI = "https://auth.example.com/callback"
+REDIRECT_URI = "https://auth.example.com/callback" # 替换为实际的回调地址
 
 AUTHORIZE_URL = "https://openapi.aliyundrive.com/oauth/authorize"
 TOKEN_URL = "https://openapi.aliyundrive.com/oauth/access_token" 
@@ -16,7 +16,7 @@ app.secret_key = os.environ.get('FLASK_SECRET_KEY', secrets.token_hex(16))
 
 @app.route('/')
 def index():
-    # 从环境变量中获取客户端ID和密钥
+    # 从环境变量中获取客户端ID和密钥, 记得导入 ALIYUN_CLIENT_ID 和 ALIYUN_CLIENT_SECRET
     client_id = os.environ.get('ALIYUN_CLIENT_ID')
     client_secret = os.environ.get('ALIYUN_CLIENT_SECRET')
     return render_template('index.html', server_configured=(client_id and client_secret))
